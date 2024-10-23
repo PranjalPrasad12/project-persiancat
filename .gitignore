@@ -55,5 +55,9 @@ dkms.conf
 .idea/
 .vscode/
 plan.md
-
-#
+# Testing Files
+*.html
+*.css
+*.js
+*.ts
+*.tsx
