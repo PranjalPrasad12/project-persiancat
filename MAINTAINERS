@@ -1,0 +1,38 @@
+List of maintainers
+===================
+
+Descriptions of section entries and preferred order
+---------------------------------------------------
+
+A- Name
+B- E-Mail Address
+C- *Status*, one of the following:
+	   Supported:	Someone is actually paid to look after this.
+	   Maintained:	Someone actually looks after it.
+	   Odd Fixes:	It has a maintainer but they don't have time to do
+			much other than throw the odd patch in. See below..
+	   Orphan:	No current maintainer [but maybe you could take the
+			role as you write your new code].
+	   Obsolete:	Old code. Something tagged obsolete generally means
+			it has been replaced by a better system and you
+			should be using that.
+D- Webpage
+F- File/Directory Contributed
+
+
+Maintainers List
+----------------
+
+.. note:: When reading this list, please look for the most precise areas
+          first. When adding to this list, please keep the entries in
+          alphabetical order in English.
+
+1-  Project Lead:
+A- Pranjal Prasad
+B- 
+C- Project Lead, Starting the project and doing other stuff
+D- 
+F- project-persiancat/
+
+
+
