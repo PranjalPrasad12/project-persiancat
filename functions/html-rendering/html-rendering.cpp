@@ -1,4 +1,3 @@
-// project-persiancat/functions/html-rendering/html_rendering.cpp
 #include "html-rendering.h"
 #include <string>
 #include <iostream>

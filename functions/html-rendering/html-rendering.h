@@ -1,4 +1,3 @@
-// project-persiancat/functions/html-rendering/html_rendering.h
 #ifndef HTML_RENDERING_H
 #define HTML_RENDERING_H
 
@@ -13,4 +12,4 @@ extern "C" {
 }
 #endif
 
-#endif // HTML_RENDERING_H
+#endif // HTML-RENDERING_H
