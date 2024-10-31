@@ -57,6 +57,9 @@ dkms.conf
 .vscode/
 plan.md
 .kateproject.notes
+*.kdev4
+.kdev4
+*.kate-swp
 # Testing Files
 *.html
 *.css
