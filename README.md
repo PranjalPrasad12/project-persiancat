@@ -1,8 +1,5 @@
-Note 2024-10-26T14.28.39
-========================
-
 # Persiancat - A simple privacy-focused browser
-   Copyright (C) 2024-2025 Pranjal Prasad
+   Copyright (C) 2024 Pranjal Prasad
 ### License
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
