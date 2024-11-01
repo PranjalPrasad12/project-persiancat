@@ -1,5 +1,6 @@
 # Persiancat - A simple privacy-focused browser
    Copyright (C) 2024 Pranjal Prasad
+   This project is still in active development, so many things that are listed in this file may not be actually presented in the project
 ### License
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
