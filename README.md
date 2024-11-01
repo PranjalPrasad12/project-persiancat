@@ -97,4 +97,4 @@ Project Persiancat wants an open community developing it, new developers and com
 
 ###  Version Lists
 1. Alpha 0.97
-Work started on 12 October 2024, released on 6 December 2024
+Work started on 12 October 2024, planned to release on 6 December 2024
