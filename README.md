@@ -79,7 +79,7 @@ Project Persiancat wants an open community developing it, new developers and com
     2. experimental- It is the experimental branch which has everything that is currently being working on.
     3. Releases(eg- alpha 0.97, v.1.2.2025.04.25).
     Here in the stable versions  **v** is followed by the version number(here 1.2) and the date on which it is released in the ISO format(YYYY-MM-DD)
-    
+
 ### Contact and Support
 
     -----------------------------------------------------
@@ -92,7 +92,8 @@ Project Persiancat wants an open community developing it, new developers and com
     NOTE:
     -----------------------------------------------------
     This project is in active development. Contributions, feedback, and collaboration are highly appreciated. Please ensure that all changes comply with the project's licensing terms.
-
+###  Dependencies used
+1. libxml2- https://gitlab.gnome.org/GNOME/libxml2  Copyright (C) 1998-2012 Daniel Veillard.  All Rights Reserved.
 ###  Version Lists
 1. Alpha 0.97
 Work started on 12 October 2024, planned to release on 6 December 2024
