@@ -60,6 +60,7 @@ plan.md
 *.kdev4
 .kdev4
 *.kate-swp
+.swp
 # Testing Files
 *.html
 *.css

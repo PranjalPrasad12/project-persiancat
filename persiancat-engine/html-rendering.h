@@ -2,7 +2,7 @@
 #define HTMLRENDERING_H
 
 #include <string>
-#include <libxml/HTMLparser.h>
+#include <libxml2/HTMLparser.h>
 
 class HTMLRenderer {
 public:

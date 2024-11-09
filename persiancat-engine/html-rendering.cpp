@@ -1,6 +1,7 @@
 #include "HTMLRenderer.h"
 #include <iostream>
 #include <cstring>
+#include <libxml2/HTMLparser.h>
 
 void HTMLRenderer::renderHTML(const std::string& content) {
     htmlDocPtr doc = htmlReadMemory(content.c_str(), content.size(), nullptr, nullptr, HTML_PARSE_NOERROR | HTML_PARSE_NOWARNING);
@@ -22,7 +23,9 @@ void HTMLRenderer::renderNode(xmlNode* node) {
                 renderElement(curr);
                 break;
             case XML_TEXT_NODE:
-                std::cout << curr->content; // Render text content
+                if (curr->content) {
+                    std::cout << curr->content; // Render text content
+                }
                 break;
             default:
                 break;
@@ -41,16 +44,26 @@ void HTMLRenderer::renderElement(xmlNode* element) {
         renderHeader(2, element);
     } else if (strcmp(name, "h3") == 0) {
         renderHeader(3, element);
+    } else if (strcmp(name, "h4") == 0) {
+        renderHeader(4, element);
     } else if (strcmp(name, "p") == 0) {
         renderParagraph(element);
     } else if (strcmp(name, "ul") == 0) {
         renderList(element);
+    } else if (strcmp(name, "ol") == 0) {
+        renderOrderedList(element);
+    } else if (strcmp(name, "li") == 0) {
+        renderListItem(element);
     } else if (strcmp(name, "a") == 0) {
         renderLink(element);
     } else if (strcmp(name, "img") == 0) {
         renderImage(element);
     } else if (strcmp(name, "table") == 0) {
         renderTable(element);
+    } else if (strcmp(name, "div") == 0) {
+        renderDiv(element);
+    } else if (strcmp(name, "span") == 0) {
+        renderSpan(element);
     }
 }
 
@@ -71,6 +84,7 @@ void HTMLRenderer::renderHeader(int level, xmlNode* element) {
         case 1: std::cout << "\n\033[1;34m"; break; // Bold Blue for H1
         case 2: std::cout << "\n\033[1;32m"; break; // Bold Green for H2
         case 3: std::cout << "\n\033[1;36m"; break; // Cyan for H3
+        case 4: std::cout << "\n\033[1;35m"; break; // Magenta for H4
         default: std::cout << "\n"; break;
     }
     xmlNode* child = element->children;
@@ -102,17 +116,34 @@ void HTMLRenderer::renderList(xmlNode* element) {
     while (child) {
         if (child->type == XML_ELEMENT_NODE && strcmp((const char*)child->name, "li") == 0) {
             std::cout << "  • ";
-            xmlNode* liChild = child->children;
-            while (liChild) {
-                if (liChild->type == XML_TEXT_NODE) {
-                    std::cout << liChild->content;
-                }
-                liChild = liChild->next;
-            }
-            std::cout << "\n";
+            renderListItem(child);
         }
         child = child->next;
     }
+}
+
+void HTMLRenderer::renderOrderedList(xmlNode* element) {
+    std::cout << "\n";
+    xmlNode* child = element->children;
+    int index = 1;
+    while (child) {
+        if (child->type == XML_ELEMENT_NODE && strcmp((const char*)child->name, "li") == 0) {
+            std::cout << index++ << ". ";
+            renderListItem(child);
+        }
+        child = child->next;
+    }
+}
+
+void HTMLRenderer::renderListItem(xmlNode* element) {
+    xmlNode* child = element->children;
+    while (child) {
+        if (child->type == XML_TEXT_NODE) {
+            std::cout << child->content;
+        }
+        child = child->next;
+    }
+    std::cout << "\n";
 }
 
 void HTMLRenderer::renderLink(xmlNode* element) {
@@ -157,6 +188,24 @@ void HTMLRenderer::renderTable(xmlNode* element) {
         row = row->next;
     }
     std::cout << "\n";
+}
+
+void HTMLRenderer::renderDiv(xmlNode* element) {
+    std::cout << "[Div Start] ";
+    renderNode(element->children);
+    std::cout << "[Div End]\n";
+}
+
+void HTMLRenderer::renderSpan(xmlNode* element) {
+    std::cout << "[Span] ";
+    xmlNode* child = element->children;
+    while (child) {
+        if (child->type == XML_TEXT_NODE) {
+            std::cout << child->content;
+        }
+        child = child->next;
+    }
+    std::cout << "[/Span]\n";
 }
 
 void HTMLRenderer::resetFormatting() {
