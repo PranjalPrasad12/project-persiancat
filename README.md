@@ -1,51 +1,6 @@
-# Persiancat - A simple privacy-focused browser
+# Persiancat - A simple privacy-focused browser and browser engine
    Copyright (C) 2024 Pranjal Prasad
    This project is still in active development, so many things that are listed in this file may not be actually presented in the project
-### License
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-    Be free to fork or experiment with this program. For the manual, visit
-    the 'Manual' folder with documentation in Markdown/HTML, OpenDocument Text,
-    and a PDF. For any advice, bug, or question, pull an issue on the Git repository.
-    
-### Project Info
-    -----------------------------------------------------
-    PROJECT INFO:
-    -----------------------------------------------------
-    Project Name    : Persiancat
-    Version         : Alpha 0.97
-    Author          : Pranjal Prasad and community
-    License         : GPL-3.0 (GNU General Public License v3.0 or later) for the browser and LGPL 3.0(GNU Lesser General Public License v3.0 or later)
-    Repository      : https://github.com/your-repository-link (replace with real link)
-    Documentation   : Markdown/HTML/OpenDocument/PDF (Located in the 'Manual' folder)
-    Work Started on : 02 October 2024
-    Description     : Persiancat is a lightweight, privacy-centric browser designed to prioritize user privacy and security by minimizing tracking, implementing built-in ad-blocking, and ensuring a minimal resource footprint.
-
-### Code of Conduct
-Project Persiancat wants an open community developing it, new developers and companies are welcomed to contribute but they must follow these conditions
-* The individual/company must be dedicated to the *free software*principles
-* They can use it to make money or fork it for personal/commercial use
-* Any forks/modifications of this code must be published under the terms of the licenses of **GNU General Public License v.3 or later**(for the Web Browser) and **GNU Lesser General Public License v.3 or later**(for the browser engine)
-* No *abuse*, *insult*, *derogatory*, *personal attacks based on one's opinions like political ideology, religion, caste, race, etc* would strictly not be tolerated, and the person doing that can be banned from the project
-*  We encourage
->     Using welcoming and inclusive language
->     Being respectful of differing viewpoints and experiences
->     Gracefully accepting constructive criticism
->     Focusing on what is best for the community
->     Showing empathy towards other community members
->     Following the *free software* principles
-
 ### Features
     ----------------------------------------------------
     FEATURES:
@@ -59,6 +14,58 @@ Project Persiancat wants an open community developing it, new developers and com
     - Customizable privacy settings and interface.
     - Support for multiple platforms (Linux, macOS and Windows). Support for FreeBSD, Solaris,  Android(natively), Windows(full featured) and other platforms is planned
     - Free and Open Source- you are free to use, modify, and redistribute.
+### Project Info
+    -----------------------------------------------------
+    PROJECT INFO:
+    -----------------------------------------------------
+    Project Name    : Persiancat
+    Version         : Alpha 0.97
+    Author          : Pranjal Prasad and community
+    License         : GPL-3.0 (GNU General Public License v3.0 or later) for the browser and LGPL 3.0(GNU Lesser General Public License v3.0 or later)
+    Repository      : https://github.com/](https://github.com/PranjalPrasad12/project-persiancat/
+    Documentation   : Markdown/HTML/OpenDocument/PDF (Located in the 'Manual' folder)
+    Work Started on : 02 October 2024
+    Description     : Persiancat is a lightweight, privacy-centric browser designed to prioritize user privacy and security by minimizing tracking, implementing built-in ad-blocking, and ensuring a minimal resource footprint.
+    
+### License
+#### Persiancat Browser
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+    SPDX-License-Identifier: GPL 3.0 or later
+
+    Be free to fork or experiment with this program. For the manual, visit
+    the 'Manual' folder with documentation in Markdown/HTML, OpenDocument Text,
+    and a PDF. For any advice, bug, or question, pull an issue on the Git repository.
+#### Persiancat Engine
+ * Persiancat Engine- The browser engine for the Persiancat Browser
+ * 
+ * Copyright (C) 2024 Pranjal Prasad
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program. If not, see <https://www.gnu.org/licenses/>.
+ *
+ * SPDX-License-Identifier: LGPL-3.0-or-later
 
 ### Contributing
     
@@ -85,8 +92,8 @@ Project Persiancat wants an open community developing it, new developers and com
     -----------------------------------------------------
     CONTACT & SUPPORT:
     -----------------------------------------------------
-    Author Email   : pranjal@example.com (replace with real email)
-    Issues Tracker : https://github.com/your-repository-link/issues (replace with real link)
+    Discussions: https://github.com/PranjalPrasad12/project-persiancat/discussions
+    Issues Tracker : https://github.com/PranjalPrasad12/project-persiancat/issues
 
     -----------------------------------------------------
     NOTE:
