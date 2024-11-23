@@ -42,6 +42,7 @@ main
 *.su
 *.idb
 *.pdb
+build
 
 # Kernel Module Compile Results
 *.mod*
@@ -67,3 +68,5 @@ plan.md
 *.js
 *.ts
 *.tsx
+# Things that are almost broken currently
+artwork

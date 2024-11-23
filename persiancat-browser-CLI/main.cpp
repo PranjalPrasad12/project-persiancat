@@ -1,96 +1,80 @@
 #include <iostream>
-#include <string>
-#include <fstream>
-#include "/persiancat-engine/html-rendering.h"  // Corrected path for html-rendering.h
+#include "headers/menu.h"
+#include "headers/config.h"
+#include "headers/page.h"
+#include "headers/search.h"
+#include "../persiancat-engine/html-rendering.h"  // Include engine functionality, most important
 
-// Function to load HTML content from a file
-std::string loadHTMLFromFile(const std::string& filePath) {
-    std::ifstream file(filePath);
-    if (!file.is_open()) {
-        std::cerr << "Error: Could not open the file.\n";
-        return "";
-    }
-
-    std::string content((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
-    file.close();
-    return content;
+// Utility to clear the screen (for better interface experience)
+void clearScreen() {
+    std::cout << "\033[2J\033[1;1H";
 }
 
+// Function to get build information
+std::string getBuildInfo() {
+    return "Persiancat v. Alpha 0.97.5\nBuilt on: " __DATE__ " " __TIME__ " UTC\nCompiler: " __VERSION__;
+}
+
+// Function to detect OS
+std::string getOperatingSystem() {
+    #if defined(_WIN32) || defined(_WIN64)
+    return "Windows";
+    #elif defined(__linux__)
+    return "Linux";
+    #elif defined(__APPLE__)
+    return "macOS";
+    #else
+    return "Unknown OS";
+    #endif
+}
+
+// Function to display the browser interface
+void displayInterface(const std::string& searchEngine) {
+    clearScreen();
+    std::cout << "START\n";
+    std::cout << "File   Edit   View   Buffers/Tabs   Tools   Settings   Help\n";
+    std::cout << "\nPersiancat is currently a browser\n";
+    std::cout << getBuildInfo() << "\n";
+    std::cout << "OS: " << getOperatingSystem() << "\n";  // Display OS info
+    std::cout << "(C) Pranjal Prasad 2024\n";
+    std::cout << "\nURL- ............................................................................................... (GO)\n";
+    std::cout << "Search Query- ................................................................................... (GO)\n";
+    std::cout << "Search Engine- " << searchEngine << " (Change Search Engine)\n";
+    std::cout << "END\n";
+}
+
+// Main program loop
 int main() {
-    // First message
-    std::cout << "Persiancat - A simple privacy-oriented minimal browser\n\n";
-    std::cout << "(C) Pranjal Prasad 2024\n\n";
-    std::cout << "This program is free software: you can redistribute it and/or modify\n";
-    std::cout << "it under the terms of the GNU General Public License as published by\n";
-    std::cout << "the Free Software Foundation, either version 3 of the License, or\n";
-    std::cout << "(at your option) any later version.\n\n";
-    std::cout << "This program is distributed in the hope that it will be useful,\n";
-    std::cout << "but WITHOUT ANY WARRANTY; without even the implied warranty of\n";
-    std::cout << "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the\n";
-    std::cout << "GNU General Public License for more details.\n\n";
-    std::cout << "You should have received a copy of the GNU General Public License\n";
-    std::cout << "along with this program. If not, see <https://www.gnu.org/licenses/>.\n\n";
+    std::string searchEngine = "DuckDuckGo"; // Default search engine
+    std::string url, query;
 
-    std::cout << "Usage: You can either enter HTML content directly or specify a file path.\n";
-    std::cout << "----------------------------------------------------------------------------\n";
+    while (true) {
+        displayInterface(searchEngine);
 
-    // Prompt user for input
-    std::cout << "Please choose an option:\n";
-    std::cout << "1. Enter HTML content directly\n";
-    std::cout << "2. Provide a file path to load HTML content\n";
-    std::cout << "Enter your choice (1 or 2): ";
+        std::cout << "\nOptions:\n1. Open Menu (Press M)\n2. Enter URL (Press U)\n3. Search (Press S)\n4. Exit (Press E)\n";
+        char choice;
+        std::cin >> choice;
 
-    int choice;
-    std::cin >> choice;
-    std::cin.ignore();  // Clear newline character from input buffer
-
-    std::string htmlContent;
-
-    if (choice == 1) {
-        // Direct HTML input
-        std::cout << "Enter HTML content (end with Ctrl+D on a new line):\n";
-        std::cin.ignore(); // clear buffer for multiline input
-        std::getline(std::cin, htmlContent, '\0');  // Capture multi-line input until EOF
-    } else if (choice == 2) {
-        // File path input
-        std::cout << "Enter file path: ";
-        std::string filePath;
-        std::cin >> filePath;
-        htmlContent = loadHTMLFromFile(filePath);
-
-        if (htmlContent.empty()) {
-            std::cerr << "Failed to load content from the file. Exiting.\n";
-            return 1;
+        switch (choice) {
+            case 'M': // Open Menu
+                handleMenu();
+                break;
+            case 'U': // Enter URL
+                std::cout << "Enter URL: ";
+                std::cin >> url;
+                openWebPage(url); // Call engine function to open the web page
+                break;
+            case 'S': // Search
+                std::cout << "Enter search query: ";
+                std::cin >> query;
+                searchQuery(query, searchEngine);  // Assuming search functionality
+                break;
+            case 'E': // Exit
+                std::cout << "Exiting Persiancat. Goodbye!\n";
+                return 0;
+            default:
+                std::cout << "Invalid choice. Try again.\n";
         }
-    } else {
-        std::cerr << "Invalid choice. Exiting.\n";
-        return 1;
     }
-
-    // Now let's use more features from the engine.
-
-    // Initialize an instance of HTMLRenderer
-    HTMLRenderer renderer;
-
-    // 1. Parse and Render HTML content (Enhanced with additional features)
-    std::cout << "Parsing and rendering HTML content...\n";
-    if (!renderer.isValidHTML(htmlContent)) {
-        std::cerr << "Error: Invalid HTML content.\n";
-        return 1;
-    }
-
-    // 2. Render the HTML content
-    renderer.renderHTML(htmlContent);
-
-    // 3. If the engine supports CSS, render styles (assuming CSS parsing feature exists)
-    std::cout << "Rendering CSS...\n";
-    renderer.renderCSS(htmlContent);  // Assuming there's a method for rendering CSS styles
-
-    // 4. Add JavaScript support (if engine supports JS rendering or simulation)
-    std::cout << "Executing JavaScript...\n";
-    renderer.executeJavaScript(htmlContent);  // Assuming there's a JS execution method
-
-    // Final message
-    std::cout << "\nRendering complete. Exiting the program. Thanks for using this browser to access the web :)\n";
     return 0;
 }
