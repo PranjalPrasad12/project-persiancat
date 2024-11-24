@@ -82,9 +82,8 @@
     Git Branches
     -----------------------------------------------------
     There are various git branches to better manage the project, they are-
-    1. master- It has the latest stable version
-    2. experimental- It is the experimental branch which has everything that is currently being working on.
-    3. Releases(eg- alpha 0.97, v.1.2.2025.04.25).
+    1. master- it is the working branch(when the release is in alpha) and the stable branch when the project is stable
+    3. Releases(eg 0.97.5-alpha, 1.2-stable, 1.2.6-beta).
     Here in the stable versions  **v** is followed by the version number(here 1.2) and the date on which it is released in the ISO format(YYYY-MM-DD)
 
 ### Contact and Support
