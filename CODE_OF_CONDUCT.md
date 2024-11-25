@@ -14,7 +14,7 @@ To build a supportive community, we ask all participants to commit to:
 - Prioritising the interests of the community as a whole
 - Fostering an open and productive environment for everyone
 
-**Unacceptable behaviors include:**
+**Unacceptable behaviours include:**
 
 - Insults, derogatory comments, or unwarranted personal attacks
 - Public or private harassment
