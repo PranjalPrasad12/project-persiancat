@@ -1,3 +1,6 @@
+# This Cmake is not working properly right now for compiling I would recommend using GCC through its CLI
+# Use this:q:
+
 # Set the minimum required version of CMake
 cmake_minimum_required(VERSION 3.10)
 

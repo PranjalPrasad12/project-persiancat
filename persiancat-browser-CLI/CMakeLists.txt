@@ -1,3 +1,7 @@
+# This Cmake is licensed under the conditions of the GPL v.3
+# (C) Pranjal Prasad 2024
+# This file is currently not working properly
+
 # Set the source files for the browser CLI
 set(CLI_SRC
     main.cpp
