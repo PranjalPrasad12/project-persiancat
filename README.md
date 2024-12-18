@@ -11,7 +11,7 @@
     - Loads only neccesary CSS(like colours) and JavaScript
     - Lightweight design with minimal resource usage.
     - Built-in tracker prevention.
-    - Customizable privacy settings and interface.
+    - Customisable privacy settings and interface.
     - Support for multiple platforms (Linux, macOS and Windows). Support for FreeBSD, Solaris,  Android(natively), Windows(full featured) and other platforms is planned
     - Free and Open Source- you are free to use, modify, and redistribute.
 ### Project Info
@@ -25,7 +25,7 @@
     Repository      : https://github.com/](https://github.com/PranjalPrasad12/project-persiancat/
     Documentation   : Markdown/HTML/OpenDocument/PDF (Located in the 'Manual' folder)
     Work Started on : 02 October 2024
-    Description     : Persiancat is a lightweight, privacy-centric browser designed to prioritize user privacy and security by minimizing tracking, implementing built-in ad-blocking, and ensuring a minimal resource footprint.
+    Description     : Persiancat is a lightweight, privacy-centric browser designed to prioritise user privacy and security by minimising tracking, implementing built-in ad-blocking, and ensuring a minimal resource footprint.
     
 ### License
 #### Persiancat Browser
