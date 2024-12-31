@@ -1,34 +1,12 @@
 The Persiancat Browser is provided under the:
-	GNU General Public License v3 or later
-	(C) Pranjal Prasad 2024
+	GNU General Public License v3.0 or later
+	(C) Pranjal Prasad 2024-2025
 
-The text of the license can be found under
+The text of the license can be found in the file
 
-	persiancat-browser-CLI/COPYING or https://www.gnu.org/licenses/gpl-3.0.txt
+	LICENSE-GPL-3.0-or-later or if you have not received the file you can also read it on
 
-The Persiancat Web Engine is provided under the:
-	GNU Lesser General Public License v3 or later
+The Persiancat Web Engine and the Servo Engine are provided under the:
+	Mozilla Public License 2.0
 
 The text of the license can found under
-	persiancat-engine/COPYING or https://www.gnu.org/licenses/lgpl-3.0.txt
-
-License Declaration of Non-Code Work
-	 The non-code work is published under GNU GFDL 1.3(Documentation, Wikis and Manuals) and CC BY 4.0(Code of Conduct)
-	 This Code of Conduct is adapted from the Contributor Covenant and is licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0). This license allows others to freely use, adapt, and distribute the Code of Conduct while giving appropriate credit.
-
-If other licenses are used in the project there text would be in the following directories:
-
-	persiancat-browser-CLI/LICENSES
-	persiancat-browser-qt/LICENSES
-	persiancat-engine/LICENSES
-
-Other Dependencies used in this project
-1. libxml2
-	libxml2- Used in the Persiancat Web-engine.
-	Path- persiancat-engine/libxml2/
-	License of the orignal project- MIT License
-	License text location- persiancat-engine/LICENSES/MIT-License_for_libxml2
-	Git repository of the project- https://gitlab.gnome.org/GNOME/libxml2
-
-
-The COPYING file is maintained by the main project maintainer, Pranjal Prasad
