@@ -1,5 +1,4 @@
 use std::ffi::{CStr, CString};
-use std::ptr;
 
 #[no_mangle]
 pub extern "C" fn render_html(html: *const i8) -> i32 {
@@ -11,13 +10,10 @@ pub extern "C" fn render_html(html: *const i8) -> i32 {
     let c_str = unsafe { CStr::from_ptr(html) };
     let rust_str = c_str.to_str().unwrap_or("");
 
-    // For simplicity, just print the HTML content. You can replace this with
-    // actual Servo rendering code, using Servo's APIs to render the content.
+    // Here, you'd integrate Servo's rendering code
     println!("Rendering HTML: {}", rust_str);
 
-    // Example: Simulate rendering with Servo (this can be extended to real functionality)
-    // This is where you'd normally pass `rust_str` to Servo for actual rendering.
-
+    // Simulate rendering (replace with real Servo call)
     0 // Success
 }
 

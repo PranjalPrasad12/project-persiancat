@@ -1,0 +1,10 @@
+[package]
+name = "RustBackend-for-Persiancat-Engine"
+version = "0.98.0"
+edition = "2021"
+
+[dependencies]
+
+[lib]
+crate-type = ["cdylib"]
+
